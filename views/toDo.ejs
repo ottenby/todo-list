@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todos</title>
+</head>
+
+
+
+<body>
+    <%   toDo.forEach((todo)=> {   %>
+        <p><%= todo.text %> </p>
+        <p><%= todo.date%> </p>
+   
+        <a href="/editTodo/<%= todo._id %>" >Edit</a>
+        <a href="/delete/<%= todo._id %>" >Delete</a>
+        <hr>
+       <% }) %>
+       
+
+    <form action="/toDo" method="POST">
+        <label for="text">Text</label>
+        <input type="text" name="text" />
+        
+        <button type="submit">create</button>
+    </form>
+
+
+
+</body>
+</html>
