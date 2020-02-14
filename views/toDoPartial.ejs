@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../public/main.css">
+    <script type="text/javascript" src="../public/completedTasks.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+        <div class="tasks">
+            
+            <%   completedTasksArray.forEach((completedTask)=> {   %>
+                <%= console.log(completedTask) %>
+            <div class="done-container">
+                <span class="done-text"> <%= completedTask.text %> </span>
+
+            </div>
+        </div>  
+        <% }) %> 
+        <a href="/toDo" id="back">back</a>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        header {
+        margin-bottom: 20px;
+
+        .welcome {
+            width: 100%;
+            text-align: center;
+        }
+        .create-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+
+            label {
+                line-height: 25px;
+                margin: 5px;
+                h5 {
+                    margin: 0;
+                }
+            }
+            .todo-input{
+                border-radius: 3px;
+                margin: 5px;
+            }
+            #favcolor {
+                margin: 5px;
+
+            }
+            .create-button{
+                border-radius: 3px;
+                margin: 3px;
+                margin: 5px;
+
+            }
+        }
+    }
+
+
+    .tasks {
+        
+        display:flex;
+        flex-direction: column;
+
+    .todo-container {
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        height: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 3px;
+        .todo-text{
+            color: white;
+            mix-blend-mode: difference;
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
+            
+        }
+        .todo-date{
+            font-style: italic;
+            width: 100%;
+        }
+        .hidden {
+            display: none;
+        }
+
+        .anchor-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            a:hover {
+                color: teal;
+
+            }
+            a:link {
+                text-decoration: none;
+                
+            }
+        
+        }
+    }
+
+    }
+    
+    .sort-page-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .number-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 30px auto;
+            width: 80%;
+            .number {}
+        }
+
+        .sort{
+            width: 50%;
+        }
+    }
+}

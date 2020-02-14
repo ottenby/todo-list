@@ -4,18 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cy:run": "Cypress run -- --record --spec 'cypress/integration/todo_ui_spec.js",
+    "unittest": "mocha",
+    "test": "npm run unittest & npm run cy:run",
     "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "mongoose": "^5.8.10"
+    "mocha": "^7.0.1",
+    "mongoose": "^5.8.10",
+    "node-sass-middleware": "^0.11.0"
   },
   "devDependencies": {
+    "cypress": "^4.0.1",
     "nodemon": "^2.0.2"
   }
 }

@@ -1,33 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Todos</title>
-</head>
+<%- include("header.ejs") %>
+
+
+    <body>
+        <header>
+            <h1 class="welcome">Do your to-do´s man!</h1>
+            
+            <form class="create-container" action="/toDo" method="POST">
+                
+                <label for="text"><h5>Create a to-do:</h5></label>
+                <input class="todo-input" type="text" name="text" />
+                <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+                
+                <button class="create-button" type="submit">create</button>
+            </form>
+        </header>
+            <div class="tasks">
+              
+                <%   tasks.forEach((task)=> {   %>
+                    
+                    <div   <%= task.col %>   class="todo-container">
+                      
+                        <span class="todo-text"><%= task.text %> </span>
+                        <span class="todo-date hidden"><%= task.date%> </span>
+                        <div class="anchor-container">
+                            <a href="/editTodo/<%= task._id %>"  >Edit</a>
+                            <a class="done" href="/complete/<%= task._id %>">Complete</a>
+                            <a class="delete" href="/delete/<%= task._id %>" >Delete</a>
+                    </div>
+            </div>
+                <% }) %>
+            <div class="sort-page-container">
+                <div class="number-container">
+                    <a href="/toDo/?page=1" class="number">1</a>
+                    -
+                    <a href="/toDo/?page=2" class="number">2</a>
+                </div>
+                <a href="/toDo/?sort=1" class="sort">Sort A-Ö</a>
+                <a href="/toDo/?sort=-1" class="sort">Sort Ö-A</a>
+                
+            </div>
+        </div>  
 
 
 
-<body>
-    <%   toDo.forEach((todo)=> {   %>
-        <p><%= todo.text %> </p>
-        <p><%= todo.date%> </p>
-   
-        <a href="/editTodo/<%= todo._id %>" >Edit</a>
-        <a href="/delete/<%= todo._id %>" >Delete</a>
-        <hr>
-       <% }) %>
-       
-
-    <form action="/toDo" method="POST">
-        <label for="text">Text</label>
-        <input type="text" name="text" />
-        
-        <button type="submit">create</button>
-    </form>
-
-
-
-</body>
+<a href="/about" class="about">About</a>
+  
+    </body>
 </html>
+
+
+
+

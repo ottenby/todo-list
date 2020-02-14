@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const toDoSchema = new mongoose.Schema(
     {
         text: String,
-        date: {type: Date, default: Date.now}
+        date: {type: Date, default: Date.now},  
+        col: String
     }
 )
 

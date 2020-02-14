@@ -1,0 +1,73 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  body header {
+    margin-bottom: 20px; }
+    body header .welcome {
+      width: 100%;
+      text-align: center; }
+    body header .create-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%; }
+      body header .create-container label {
+        line-height: 25px;
+        margin: 5px; }
+        body header .create-container label h5 {
+          margin: 0; }
+      body header .create-container .todo-input {
+        border-radius: 3px;
+        margin: 5px; }
+      body header .create-container #favcolor {
+        margin: 5px; }
+      body header .create-container .create-button {
+        border-radius: 3px;
+        margin: 3px;
+        margin: 5px; }
+  body .tasks {
+    display: flex;
+    flex-direction: column; }
+    body .tasks .todo-container {
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      height: 100%;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 3px; }
+      body .tasks .todo-container .todo-text {
+        color: white;
+        mix-blend-mode: difference;
+        text-align: center;
+        font-weight: bold;
+        width: 100%; }
+      body .tasks .todo-container .todo-date {
+        font-style: italic;
+        width: 100%; }
+      body .tasks .todo-container .hidden {
+        display: none; }
+      body .tasks .todo-container .anchor-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; }
+        body .tasks .todo-container .anchor-container a:hover {
+          color: teal; }
+        body .tasks .todo-container .anchor-container a:link {
+          text-decoration: none; }
+  body .sort-page-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    body .sort-page-container .number-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 30px auto;
+      width: 80%; }
+    body .sort-page-container .sort {
+      width: 40%; }
